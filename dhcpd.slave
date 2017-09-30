@@ -1,0 +1,10 @@
+failover peer "failover-partner" {
+  slave;
+  address 10.96.6.2;
+  port 647;
+  peer address 10.96.6.1;
+  peer port 647;
+  max-response-delay 10;
+  max-unacked-updates 10;
+  load balance max seconds 5;
+}
