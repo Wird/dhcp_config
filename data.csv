@@ -1,8 +1,4 @@
 prefix,vrf,tenant,site,vlan_group,vlan_vid,status,role,is_pool,description
-10.248.0.0/18,,,npflan,npflan-vlans,250,Active,,,
-10.248.64.0/18,,,npflan,npflan-vlans,251,Active,Wireless,,Wireless Billetnet
-10.248.128.0/18,,,npflan,npflan-vlans,252,Active,,,
-10.248.192.0/18,,,npflan,npflan-vlans,253,Active,Wireless,,Wireless Adm
 172.20.0.0/30,,,,,,Active,,,Kube Link Node 1 C1
 172.20.1.0/30,,,,,,Active,,,Kube Link Node 1 C2
 217.63.127.0/24,,,,,,Container,,,Public IPs
@@ -230,7 +226,7 @@ prefix,vrf,tenant,site,vlan_group,vlan_vid,status,role,is_pool,description
 10.100.255.12/30,npflan,,npflan,,,Active,Link Net,,TOR3-Duconet
 10.222.11.0/24,npflan,,npflan,,,Active,Access,,VLAN 222 på Core 2
 ,,,,,,,,,
-10.248.0.0/18,npflan,,npflan,npflan-vlans,250,Active,Management Access Points,,Wifi Crew & Management
+10.248.0.0/18,npflan,,npflan,npflan-vlans,250,Active,Wireless,,Wifi Crew & Management
 10.248.64.0/18,npflan,,npflan,npflan-vlans,251,Active,Wireless,,Wireless Billet
 10.248.128.0/18,npflan,,npflan,npflan-vlans,252,Active,Wireless,,Wireless Expo
 10.248.192.0/18,npflan,,npflan,npflan-vlans,253,Active,Wireless,,Wireless Adm
