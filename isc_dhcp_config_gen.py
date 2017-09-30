@@ -17,7 +17,7 @@ with open('data.csv', newline="") as csvfile:
     print('key omapi_key {')
     print('\t algorithm hmac-md5;')
     print('\t secret LsMkrX1xprEQQBoeGAC6NvokcA/mcuD5LnBqD/2gxJEpZqTTRN7vtPm0BVW03zl0oo1qWCVrNTqsoAq2B8hrsg==;')
-    print('}\n')
+    print('};\n')
 
     # Argument to generate include for high availability config
     if len(sys.argv) > 1 and sys.argv[1] == "master":
@@ -26,10 +26,12 @@ with open('data.csv', newline="") as csvfile:
         print('include "/etc/dhcpd.slave";\n')
 
     print('subnet 10.90.0.0 netmask 255.255.0.0 {')
-    print('}\n')
+    print('};\n')
 
     for row in reader:
         if row[7].lower() == "Access".lower() or row[7].lower() == "Wireless".lower():
+            print(row[7])
+            print("# " + row[7])
             ip = ipaddress.IPv4Network(row[0])
             parts = ip.with_netmask.split('/')
             network = parts[0]

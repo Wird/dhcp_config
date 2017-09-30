@@ -229,7 +229,7 @@ prefix,vrf,tenant,site,vlan_group,vlan_vid,status,role,is_pool,description
 10.100.255.8/30,npflan,,npflan,,,Active,Link Net,,TOR3-TOR7
 10.100.255.12/30,npflan,,npflan,,,Active,Link Net,,TOR3-Duconet
 10.222.11.0/24,npflan,,npflan,,,Active,Access,,VLAN 222 på Core 2
-10.248.0.0/16,npflan,,npflan,,,Active,Wireless,,Wireless Networks
+,,,,,,,,,
 10.248.0.0/18,npflan,,npflan,npflan-vlans,250,Active,Management Access Points,,Wifi Crew & Management
 10.248.64.0/18,npflan,,npflan,npflan-vlans,251,Active,Wireless,,Wireless Billet
 10.248.128.0/18,npflan,,npflan,npflan-vlans,252,Active,Wireless,,Wireless Expo
