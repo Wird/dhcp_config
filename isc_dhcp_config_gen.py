@@ -26,18 +26,19 @@ with open('data.csv', newline="") as csvfile:
         print('include "/etc/dhcpd.slave";\n')
 
     print('subnet 10.90.0.0 netmask 255.255.0.0 {')
-    print('};\n')
+    print('}\n')
 
     for row in reader:
         if row[7].lower() == "Access".lower() or row[7].lower() == "Wireless".lower():
-            print(row[7])
             print("# " + row[7])
             ip = ipaddress.IPv4Network(row[0])
             parts = ip.with_netmask.split('/')
             network = parts[0]
             subnetmask = parts[1]
             print("subnet " + network + " netmask " + subnetmask + " {")
-            print("\t range " + str(ip[4]) + " " + str(ip[pow(2, (32-ip.prefixlen))-6]) + ";")
-            print('\t failover peer "failover-partner";')
-            print("\t option routers " + str(ip[1]) + ";")
+            print("\t pool {")
+            print("\t\t range " + str(ip[4]) + " " + str(ip[pow(2, (32-ip.prefixlen))-6]) + ";")
+            print('\t\t failover peer "failover-partner";')
+            print("\t\t option routers " + str(ip[1]) + ";")
+            print("\t}")
             print("}\n")
